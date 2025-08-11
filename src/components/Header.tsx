@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 const menuItems = ["Collections", "Men", "Women", "About", "Contact"];
 import { FiShoppingCart, FiUser } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
