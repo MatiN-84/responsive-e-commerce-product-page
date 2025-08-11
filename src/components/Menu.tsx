@@ -5,7 +5,7 @@ function Menu({navbar , setNavbar}) {
   return (
 
     <div
-      className={` h-159 w-80 z-10 p-3 absolute bg-white  sm:hidden ${
+      className={` h-159 w-80 z-10 p-3 absolute bg-white  sm:hidden z-10000 ${
         navbar ? "min-sm:-left-0" : "min-sm:-left-80"
       } transition-all duration-400 ${
         navbar ? "translate-x-0" : "-translate-x-full"
