@@ -4,8 +4,12 @@ import { FiShoppingCart, FiUser } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import imageB1 from "../assets/image1big.jpg";
 import { AiFillDelete } from "react-icons/ai";
-
-function Header({ setNavbar, cart, setCart }) {
+interface HeaderPropsType {
+  setNavbar: React.Dispatch<React.SetStateAction<boolean>>;
+  cart: number;
+  setCart: React.Dispatch<React.SetStateAction<number>>;
+}
+function Header({ setNavbar, cart, setCart }: HeaderPropsType) {
   const [popup, setPopup] = useState(false);
   return (
     <div>    <div className="h-16 flex items-center p-4  border-b-1 border-b-[#e8e8e8] sm:mx-5 sm:mb-10 h-25 ">
@@ -59,7 +63,7 @@ function Header({ setNavbar, cart, setCart }) {
           size={20}
           color="grey"
           className="mt-1 min-sm:hidden"
-          onClick={(e) => setNavbar((prev) => !prev)}
+          onClick={() => setNavbar((prev:boolean) => !prev)}
         />
         <div className="font-extrabold text-2xl mr-10">sneakers</div>
         <div className="hidden sm:flex ">

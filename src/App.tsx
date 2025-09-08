@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Slider from "./components/Slider";
 import Info from "./components/Info";
-import Header from "./components/header";
+import Header from "./components/Header";
 
 import CartBox from "./components/CartBox";
 import Menu from "./components/Menu";

@@ -1,7 +1,12 @@
-import React from "react";
+
 const menuItems = ["Collections", "Men", "Women", "About", "Contact"];
 import { RxCross2 } from "react-icons/rx";
-function Menu({navbar , setNavbar}) {
+
+interface MenuPropsType {
+  navbar: boolean;
+  setNavbar: React.Dispatch<React.SetStateAction<boolean>>;
+}
+function Menu({navbar , setNavbar}: MenuPropsType) {
   return (
 
     <div
@@ -15,7 +20,7 @@ function Menu({navbar , setNavbar}) {
         size={24}
         color="hsl(0, 0%, 30.1%) "
         style={{ cursor: "pointer" }}
-        onClick={(e) => setNavbar(false)}
+        onClick={() => setNavbar(false)}
       />
 
       <div className="mt-13">
